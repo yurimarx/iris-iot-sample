@@ -51,11 +51,53 @@ It will start observing the MQTT topic /DeviceStatusInputTopic and it will produ
 
 <img alt="Production" src="https://github.com/yurimarx/iris-iot-sample/blob/master/Production.png?raw=true">
 
-## How to alter the template 
-Use the green    "Use this template" button on Github to copy files into a new repository and build a new IRIS interoperability solution using this one as an example.
+2. Use a MQTT client to send a message and test the production. For this, into your Google Chrome browser access https://chrome.google.com/webstore/detail/mqttbox/kaajoficamnjijhkeomgfljpicifbkaf. It is the Chrome Plugin MQTTBox. Click Add to Chrome and after Add App.
 
-This repository is ready to code in VSCode with the ObjectScript plugin.
-Install [VSCode](https://code.visualstudio.com/), [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) and [ObjectScript](https://marketplace.visualstudio.com/items?itemName=daimor.vscode-objectscript) plugin and open the folder in VSCode.
+<img alt="MQTTBox" src="https://github.com/yurimarx/iris-iot-sample/blob/master/MQTTBox.png?raw=true">
 
-Use the handy VSCode menu to access the production and business rule editor and run a terminal:
-<img width="656" alt="Screenshot 2020-10-29 at 20 15 56" src="https://user-images.githubusercontent.com/2781759/97608650-aa673480-1a23-11eb-999e-61e889304e59.png">
+3. In your Google Chrome browser access chrome://apps/ and select MQTTBox (if required, click Open Anyway).
+
+<img alt="Open MQTTBox" src="https://github.com/yurimarx/iris-iot-sample/blob/master/OpenMQTTBox.png?raw=true">
+
+4. Click Create MQTT Client button.
+
+<img alt="Click Create Client" src="https://github.com/yurimarx/iris-iot-sample/blob/master/CreateMQTTClient.png?raw=true">
+
+5. Configure the MQTT connection with these settings:
+
+- Client name: Local
+- Protocol: mqtt / tcp
+- Host: localhost:1883
+- Username: admin
+- Password: admin
+- All other settings are the default values
+
+<img alt="MQTTBox Settings" src="https://github.com/yurimarx/iris-iot-sample/blob/master/MQTTBoxSettings.png?raw=true">
+
+6. Configure the MQTT topics to send and receive MQTT messages:
+
+- Topic to publish: /DeviceStatusInputTopic
+- Topic to subscribe: /DeviceStatusOutputTopic
+- Payload: 
+
+```
+{
+"deviceId":"Air Conditioner Level 1",
+"statusDate":"2023-01-07 14:03:00",
+"status": 0
+}
+```
+
+<img alt="MQTTBox Topics Config" src="https://github.com/yurimarx/iris-iot-sample/blob/master/MQTTBoxTopicsConfig.png?raw=true">
+
+7. Click the button Subscribe to listen messages on the topic /DeviceStatusOutputTopic. Now the UI changes to wait for messages on this topic.
+
+<img alt="MQTTBox Wait messages" src="https://github.com/yurimarx/iris-iot-sample/blob/master/MQTTBoxWaitMessages.png?raw=true">
+
+8. Click the button Publish to send a message to /DeviceStatusInputTopic and see the results produced by IRIS production on /DeviceStatusOutputTopic
+
+<img alt="MQTTBox Topic results" src="https://github.com/yurimarx/iris-iot-sample/blob/master/MQTTBoxTopicResults.png?raw=true">
+
+9. See the message processing session on IRIS Management Portal Visual Trace
+
+<img alt="Production Visual Trace" src="https://github.com/yurimarx/iris-iot-sample/blob/master/ProductionVisualTrace.png?raw=true">
