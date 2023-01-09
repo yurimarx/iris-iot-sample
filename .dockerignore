@@ -1,2 +1,4 @@
 **/.DS_Store
 .git
+mosquitto/data
+mosquitto/log
