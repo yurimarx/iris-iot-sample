@@ -4,5 +4,6 @@
     Do ##class(Security.Users).UnExpireUserPasswords("*")
 
     zn "USER"
+    Do ##class(EnsPortal.Credentials).SaveItem(0, "mosquitto_cred","mosquitto_cred","admin","admin","")
     zpm "load /home/irisowner/irisbuild/ -v":1:1
     halt

@@ -49,7 +49,7 @@ $ docker-compose up -d
 1. Open the [production](http://localhost:52795/csp/user/EnsPortal.ProductionConfig.zen?$NAMESPACE=USER&$NAMESPACE=USER&) and start it.
 It will start observing the MQTT topic /DeviceStatusInputTopic and it will produce responses to MQTT topic /DeviceStatusOutputTopic. See:
 
-<img width="1123" alt="Production" src="https://user-images.githubusercontent.com/2781759/97607761-77707100-1a22-11eb-9ce8-0d14d6f6e315.png">
+<img alt="Production" src="https://github.com/yurimarx/iris-iot-sample/blob/master/Production.png?raw=true">
 
 ## How to alter the template 
 Use the green    "Use this template" button on Github to copy files into a new repository and build a new IRIS interoperability solution using this one as an example.
