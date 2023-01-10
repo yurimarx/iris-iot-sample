@@ -8,18 +8,21 @@ It consume a MQTT message and send other MQTT message as response.
 
 ## Installation: ZPM
 
-Open IRIS Namespace with Interoperability Enabled.
-Open Terminal and call:
+1. Open IRIS Namespace with Interoperability Enabled.
+2. Open Terminal and call:
+
+```
 USER>zpm "install iris-iot-sample"
+```
 
 ## Installation: Docker
-Clone/git pull the repo into any local directory
+1. Clone/git pull the repo into any local directory
 
 ```
 $ git clone https://github.com/yurimarx/iris-iot-sample.git
 ```
 
-Open the terminal in this directory and run:
+2. Open the terminal in this directory and run:
 
 ```
 $ docker-compose build
