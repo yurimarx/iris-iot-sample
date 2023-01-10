@@ -1,2 +1,3 @@
 .DS_Store
 mosquitto/log/mosquitto.log
+mosquitto/data/mosquitto.db

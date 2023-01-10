@@ -6,17 +6,6 @@
 This is a sample of InterSystems IRIS Interoperability solution for IoT using MQTT.
 It consume a MQTT message and send other MQTT message as response.
 
-## What The Sample Does
-
-This sample has an interoperability [production](https://github.com/intersystems-community/iris-interoperability-template/blob/master/src/dc/Demo/Production.cls) with an inbound [Reddit Adapter](https://github.com/intersystems-community/iris-interoperability-template/blob/master/src/dc/Reddit/InboundAdapter.cls) which is used by a [Business Service](https://github.com/intersystems-community/iris-interoperability-template/blob/master/src/dc/Demo/RedditService.cls) to read data from Reddit.com.
-It reads from reddit.com/new/.json every 15 sec.
-You can alter both the URL and frequency in the service's settings.
-<img width="1411" alt="Screenshot 2020-10-29 at 19 33 14" src="https://user-images.githubusercontent.com/2781759/97603605-a6d0af00-1a1d-11eb-99cc-481efadb0ec6.png">
-
-The production has a business process with a rule, which filters on news that mentions cats and dogs. The business process then sends this data to a business operation which either saves data to a source folder /output/Dog.txt or /output/Cat.txt.
-<img width="864" alt="Screenshot 2020-10-29 at 19 38 58" src="https://user-images.githubusercontent.com/2781759/97606568-fcf32180-1a20-11eb-90de-4257dd2cf552.png"> 
-
-
 ## Installation: ZPM
 
 Open IRIS Namespace with Interoperability Enabled.
